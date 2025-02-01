@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Generate Random Color</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        div{
+            
+            border: 2px solid black;
+            width: 50%;
+            height: 100px;
+            margin: 0 auto;
+            
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Generate Random Color</h1>
+    <div>
+        <p>This is your new color</p>
+    </div>
+    <br><br>
+
+    <button>Generate Color</button>
+
+
+    
+    <script>
+        let btn=document.querySelector("button");
+        btn.addEventListener("click",function (){
+            let h1=document.querySelector("h1");
+            let randomColor= getRandomColor();
+            h1.innerText=randomColor;
+
+            let div=document.querySelector("div");
+            div.style.backgroundColor=getRandomColor();
+            let p=document.querySelector("p");
+            p.style.color="white";
+
+            console.log("color updated");
+        });
+        function getRandomColor(){
+            let red=Math.floor(Math.random()*255);
+            let green=Math.floor(Math.random()*255);
+            let blue=Math.floor(Math.random()*255);            
+
+            let color=`rgb(${red},${green},${blue})`;
+            return color;
+        }
+
+    </script>
+</body>
+</html>

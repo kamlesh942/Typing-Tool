@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>practice</title>
+</head>
+<body>
+    <h1>Change color</h1>
+    <h3> click to change color</h3>
+    <p>hello this is Kamlesh from aks university Satna</p>
+    <button id="btn"> click me !</button>
+
+    <script>
+        let btn =document.querySelector("button");
+        let h1=document.querySelector("h1");
+        let p=document.querySelector("p");
+        let h3=document.querySelector("h3");
+
+        function ChangeColor(){
+            console.dir(this.innerText);
+            this.style.backgroundColor="blue";
+        }
+
+        btn.addEventListener("click" ,ChangeColor);
+        h1.addEventListener("click" ,ChangeColor);
+        p.addEventListener("click" ,ChangeColor);
+        h3.addEventListener("click", ChangeColor);
+        
+    </script>
+</body>
+</html>

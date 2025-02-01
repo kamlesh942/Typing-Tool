@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <title>Get Character only</title>
+</head>
+<body>
+    <h1></h1>
+
+    <input type="text" placeholder="Enter your name" >
+
+    <script>
+        let input = document.querySelector("input");  // Get the input element
+        let h1 = document.querySelector("h1");        // Get the h1 element
+
+        input.addEventListener("input", function() {
+            console.log(input.value);                 // Log the current input value to the console
+            let validInput = '';
+            let inputValue = input.value;             // Get the current value of the input field
+
+               for (let i = 0; i < inputValue.length; i++) {
+                let char = inputValue[i];             // Get each character in the input
+                                                     // Check if the character is a letter (a-z, A-Z) or space
+                if ((char >= 'a' && char <= 'z') || (char >= 'A' && char <= 'Z') || char === ' ') {
+                    validInput += char;  
+                    
+                    // Add valid characters to the validInput string
+                    
+                }
+            }
+
+            // Update the h1 element with the filtered valid input.
+
+            h1.innerText = validInput;
+
+            // Update the input field with only valid characters
+
+            input.value = validInput;  
+
+        });
+
+    </script>
+</body>
+</html>

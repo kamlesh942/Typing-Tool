@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div{
+            background-color: pink;
+            border: solid black;
+        }
+        .div2{
+            border: solid rgb(255, 0, 0);
+
+        }
+    </style>
+</head>
+<body>
+
+    <h1> In this there is no use of html only used javascript for making html in body   section</h1>
+    <script>
+let para1=document.createElement('p');
+para1.innerText="i am red para";
+
+document.querySelector("body").append(para1);
+para1.style.color="green";
+
+let h3=document.createElement("h3");
+h3.innerText="i am blue h3";
+document.querySelector("body").append(h3);
+h3.style.color="BLUE";
+
+let div=document.createElement("div");
+let h1=document.createElement("h1");
+let para2=document.createElement("para2");
+
+h1.innerText="I am in div ";   
+para2.innerText="me too!";
+div.append(h1);
+div.append(para2);
+div.classList.add("div");
+
+document.querySelector("body").append(div);
+let div2=document.createElement("div");
+        div2.append(h3);
+        div2.append(para1);
+        div2.append(div);
+        div2.classList.add("div2");
+
+        document.querySelector("body").append(div2);
+
+
+
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        div{
+            background-color: pink;
+            height: 200px;
+            width: 400px;
+        }
+        ul{
+            background-color: blue;
+        }
+        li{
+            background-color: greenyellow;
+        }
+    </style>
+   
+    <title>Mini Project</title>
+</head>
+<body>
+    <div>
+        <ul>
+            <li>one</li>
+            <li>two</li>
+            <li>three</li>
+        </ul>
+    </div>
+
+    <script>
+        let div=document.querySelector("div");
+        let ul=document.querySelector("ul");
+        let lis=document.querySelectorAll("li");
+        div.addEventListener("click", function(){
+            event.stopPropagation();
+
+            console.log("div clicked");
+
+        });
+        ul.addEventListener("click", function(){
+            event.stopPropagation();
+            console.log("ul clicked");
+
+        });
+        for(li of lis){
+            li.addEventListener("click", function(){
+                event.stopPropagation();
+
+            console.log("list clicked");
+
+        });
+        }
+
+
+    </script>
+</body>
+</html>
